@@ -14,12 +14,12 @@ def translate(message):
     if message.text[4:] != None:
         lang = message.text[4:]
     else:
-        lang = "en"
+        lang = "pt"
     translator = Translator()
     try:
         translated = translator.translate(to_translate_text, dest=lang)
         src_lang = translated.src
         translated_text = translated.text
-        bot.reply_to(message, "Translated from {} to {}.\n\n{}.".format(src_lang, lang, translated_text))
+        bot.reply_to(message, "Traduzido de {} para {}.\n\n{}.".format(src_lang, lang, translated_text))
     except:
-        bot.reply_to(message, "Error in Translation")
+        bot.reply_to(message, "Erro na tradução")
