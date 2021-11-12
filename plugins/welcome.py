@@ -44,7 +44,7 @@ def setwelcome(message):
     if members.status == "administrator" or members.status == "creator":
         text, data_type, content, buttons = get_welcome_type(message)
         sql.set_custom_welcome(chat_id, content or text, data_type, buttons)
-        bot.reply_to(message, "Successfully set welcome message for *{}*".format(message.chat.title), parse_mode="Markdown")
+        bot.reply_to(message, "Mensagem de boas-vindas definida com sucesso para *{}*".format(message.chat.title), parse_mode="Markdown")
 
 @bot.message_handler(commands=['welcome']) #To see welcome format
 def seewelcome(message):
