@@ -3,8 +3,8 @@ from enum import IntEnum, unique
 from sqlalchemy import Column, String, Boolean, UnicodeText, Integer, BigInteger
 from SQL.__init__ import SESSION, BASE
 
-DEFAULT_WELCOME = "Hey {first}, how are you?"
-DEFAULT_GOODBYE = "Nice knowing ya!"
+DEFAULT_WELCOME = "Ei {first}, como você está?"
+DEFAULT_GOODBYE = "Prazer em te conhecer!"
 
 @unique
 class Types(IntEnum):
